@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Summer by mlpdesign.net</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="algoritmo k-means">
+<meta name="author" content="">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <div id="menu">
+        <nav>
+            <label for="show-menu" class="responsive">&#9776; Algoritmo K-means</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="topnav">
+                <span><a href="#" title="Your Logo" class="logo"><img src="uaeh.png" alt="" width="160px"></a></span>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#quees">¿Que es?</a></li>
+                <li><a href="#clasificacion">Clasificación</a></li>
+                <li><a href="#funcionamiento">Funcionamiento</a></li>
+                <li><a href="#ejemplo">Ejemplo</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    
+    <div id="container">
+        <div id="pageheader">
+            <div class="col">
+            <br>
+            <h2>Integrantes</h2>
+            </div>
+            <br>
+            <div class="col">
+            <br><br>
+            <ul id="sub"><li>Encarnación Hernández Raúl</li></ul>            
+            <br>
+            <ul id="sub"><li>Guerrero Ramirez Luis Angel</li></ul>            
+            <br>
+            <ul id="sub"><li>Hernandez Cruz Diego Alberto</li></ul>
+            <br>
+            <ul id="sub"><li>Vargas Balderas Bruno Valmiki</li></ul>
+            <br><br>
+            
+            </div>
+        </div>
+
+        <!-- introduccion -->
+        <div class="section">
+            <div id="introduccion">
+            <div class="pageitem">
+            <h1>Algoritmo de K-means</h1>
+            <h2>Introduccion</h2>
+            </div>
+            
+            <div class="pageitem">
+                <p>
+                    El término "k-medias" fue utilizado por primera vez por James MacQueen en 1967, aunque la idea 
+                    se remonta a Hugo Steinhaus en 1957.
+                    ​ El algoritmo estándar fue propuesto por primera vez por Stuart Lloyd en 1957 como una técnica 
+                    para modulación por impulsos codificados, aunque no se publicó fuera de los laboratorios Bell 
+                    hasta 1982.
+
+                </p>
+                <p>
+                    K-means es un algoritmo de clasificación no supervisada (clusterización) que agrupa objetos en 
+                    k grupos basándose en sus características. 
+                </p>
+                <h2>Clustering</h2>
+                <p>
+                    El clustering es una tarea que tiene como finalidad principal lograr el agrupamiento de conjuntos 
+                    de objetos no etiquetados, para lograr construir subconjuntos de datos conocidos como Clusters. 
+                    Esta técnica no supervisada se basa en identificar grupos en los datos de tal manera que todos los 
+                    datos del grupo (clúster) son datos con características similares mientras que los datos de los 
+                    otros grupos son diferentes.
+                </p>
+                
+            </div>
+          </div>
+
+        </div>
+
+        <!-- que es -->
+        <div class="section">
+            <div id="quees">
+                <div class="pageitem">
+                    <h2>¿Que es?</h2>
+                </div>
+            
+                <div class="pageitem">
+                    <p>
+                        K-Means (traducido como K-Medias) es un método de agrupamiento, 
+                        que tiene como objetivo la partición de un conjunto de n observaciones en k grupos en el que 
+                        cada observación pertenece al grupo cuyo valor medio es más cercano. Es un método utilizado en 
+                        minería de datos.
+                        Para saber si los datos son parecidos o diferentes el algoritmo K-medias utiliza la distancia 
+                        entre los datos. Las observaciones que se parecen tendrán una menor distancia entre ellas. 
+                        En general, como medida se utiliza la distancia euclidiana, aunque también se pueden utilizar otras funciones.
+                    </p>
+                    <img src="pictures/introduccion.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- clasificacion -->
+        <div class="section">
+            <div id="clasificacion">
+
+            <div class="pageitem">
+                <h2>Clasificación</h2>
+            </div>
+    
+            <div class="pageitem">
+                <p>La clasificación automática de objetos o datos es uno de los objetivos del aprendizaje de máquina. Podemos considerar tres tipos de algoritmos:</p>
+                <ul id="clasif">
+                    <li>Clasificación supervisada: disponemos de un conjunto de datos (por ejemplo, imágenes de letras escritas a mano) que vamos 
+                        a llamar datos de entrenamiento y cada dato está asociado a una etiqueta (a qué letra corresponde cada imagen). 
+                        Construímos un modelo en la fase de entrenamiento (training) utilizando dichas etiquetas, que nos dicen si una imagen está clasificada correcta o incorrectamente por el modelo.
+                    </li>
+                    <li>
+                        Clasificación no supervisada: los datos no tienen etiquetas (o no queremos utilizarlas) y estos se clasifican a partir de su estructura interna (propiedades, características).
+                    </li>
+                    <li>
+                        Clasificación semisupervisada: algunos datos de entrenamiento tienen etiquetas, pero no todos. Este último caso es muy típico en clasificación de imágenes, donde es habitual disponer de muchas imágenes mayormente no etiquetadas. 
+                    </li>
+                </ul>
+            </div>
+          </div>
+    
+        </div>
+
+        <!-- Funcionamiento -->
+        <div class="section">
+            <div id="funcionamiento">
+
+            <div class="pageitem">
+                <h2>Funcionamiento</h2>
+            </div>
+    
+            <div class="pageitem">
+                <p>
+                    Los algoritmos de clustering son considerados de aprendizaje no supervisado. Este tipo de 
+                    algoritmos de aprendizaje no supervisado busca patrones en los datos sin tener una predicción 
+                    específica como objetivo (no hay variable dependiente).
+                </p>
+                <p>
+                    K-means necesita como dato de entrada el número de grupos en los que vamos a segmentar la 
+                    población. A partir de este número k de clusters, el algoritmo coloca primero k puntos aleatorios 
+                    (centroides). Luego asigna a cualquiera de esos puntos todas las muestras con las distancias más 
+                    pequeñas.
+                </p>
+                
+                <h2>Pasos del funcionamiento</h2>
+                <p>
+                    1.-Elección del número de clústers k
+                    El primer paso siempre es elegir en cuantas agrupaciones queremos segmentar los datos.
+                </p>
+                <img src="pictures/paso1.png" alt="Paso 1">
+
+                <p>
+                    2.-Inicializar las coordenadas de los centroides
+                    Los centroides se inicializan en coordenadas aleatorias. Suponiendo que tenemos k=2, iniciamos 
+                    dos centroides, uno rojo y otro verde, en puntos aleatorios de los datos.
+                </p>
+                <img src="pictures/paso2.png" alt="Paso 2">
+
+                <p>
+                    3.-Asignamos cada punto a un clúster
+                    Se calcula la distancia de cada punto a cada centroide, y se agrupa con aquel centroide más próximo
+                </p>
+                <img src="pictures/paso3.png" alt="Paso 3">
+
+                <p>
+                    4.-Se recalculan los centroides de los clústers
+                    Una vez tenemos todos los puntos asignados a un clúster, se recalculan los centroides de manera que
+                     vuelven a ser los centros de cada clúster.
+                </p>
+                <img src="pictures/paso4.png" alt="Paso 4">
+
+                <p>
+                    Se repiten los pasos 3 y 4 hasta que se llega al criterio de parada.El proceso de asignar cada 
+                    punto a un clúster y calcular los centros se repite hasta que se cumple el criterio de parada 
+                    estipulado.
+                </p>
+                <img src="pictures/paso5.png" alt="Paso 5">
+                
+            </div>
+        </div>
+        </div>
+
+        <!-- Ejemplo -->
+        
+        <div class="section">
+            <div id="ejemplo">
+         
+                <div class="pageitem">
+                    <h2>Ejemplo</h2>
+                </div>
+    
+                <div class="pageitem">
+                    <p>
+                        Este tipo de algotimo de aprendizaje no supervisado es útil para explorar, describir y resumir 
+                        datos de una forma distinta. Utilizar este agrupamiento de datos nos puede servir para confirmar 
+                        (o rechazar) algún tipo de clasificación previa. 
+                    </p>
+                    <p>
+                        Por ejemplo, podemos aplicar K-means en:
+                    </p>
+                    <p>
+                        *Segmentación de clientes.<br>
+                        *Agrupación de textos que hablan de temas similares. <br>
+                        *Geoestadística. <br>
+                        *Comunidades de redes sociales. 
+                    </p>
+                    <h2>Ejemplo en Phyton</h2>
+                    <h2>Se obtienen los datos del documento</h2>
+                    <img src="pictures/imagen1-ejemplo.png" alt="Imagen 1">
+                    <img src="pictures/Imagen2-ejemplo.png" alt="Imagen 2">
+                    <hr>
+                    <h2>Distribuciones de los datos</h2>
+                    <img src="pictures/Imagen3-ejemplo.png" alt="Imagen 3">
+                    <hr>
+                    <h2>Numero de clusters</h2>
+                    <img src="pictures/Imagen4-ejemplo.png" alt="Imagen 4">
+                    <hr>
+                    <h2>Resultados sin agrupar</h2>
+                    <img src="pictures/Imagen5-ejemplo.png" alt="Imagen 5">
+                    <hr>
+                    <h2>Resultados agrupados</h2>
+                    <img src="pictures/Imagen6-ejemplo.png" alt="Imagen 6">
+                </div>      
+            </div>
+        </div>
+
+        <!-- Referencias -->
+        <div class="section">
+            <div id="referencias">
+
+                <div class="pageitem">
+                    <h2>Referencias</h2>
+                </div>
+    
+                <div class="pageitem">
+                    <ul id="ref">
+                        <li>
+                            Sanz, F. (2021, 14 mayo). ✅ Algoritmo K-Means | Clustering de forma sencilla. The Machine Learners. Recuperado 8 de mayo de 2022, 
+                            de https://www.themachinelearners.com/k-means/
+                        </li>
+                        <li>
+                            O. (2020, 7 septiembre). ¿Qué es el Clustering? GraphEverywhere. Recuperado 8 de mayo de 2022, de
+                            https://www.grapheverywhere.com/que-es-el-clustering/
+                        </li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+       <!-- footer             -->
+       <div class="section">
+            <div id="footer">
+                <p class="footer">Derechos reservados. Algoritmo K-means.</p>
+                <p class="footer">Universidad Autónoma del Estado de Hidalgo</p>
+            </div>
+        </div>
+            
+    </footer>
+
+</body>
+</html>
+     
